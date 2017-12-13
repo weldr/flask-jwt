@@ -56,7 +56,7 @@ Requires:       python-jwt
 
 
 %prep
-%setup -q -n %{pypi_name}-%{version}
+%setup -q -n %{name}-%{version}
 rm -rf %{pypi_name}.egg-info
 
 
@@ -93,13 +93,13 @@ popd
 
 
 %files -n python2-flask-jwt
-%doc README.markdown
+%doc README.rst
 %license LICENSE
 %{python2_sitelib}/*
 %if 0%{?with_python3}
 
 %files -n python3-flask-jwt
-%doc README.markdown
+%doc README.rst
 %license LICENSE
 %{python3_sitelib}/*
 %endif # with_python3
